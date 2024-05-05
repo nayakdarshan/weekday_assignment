@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Getting Started with Job Listing App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Clone this repo and run  
+
+### `npm i `
+
+to install the necessary dependencies for running the app,
+incase if you are facing issues regarding installing dependecies, run:
+
+### `npm i -force`
 
 ## Available Scripts
 

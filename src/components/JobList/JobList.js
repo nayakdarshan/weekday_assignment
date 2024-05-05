@@ -14,14 +14,16 @@ const JobList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const page = useRef(1);
+  const offset = useRef(0);
 
   const fetchData = async () => {
     try {
       setIsLoading(true);
-      const data = await fetchJobListings(page.current);
+      const data = await fetchJobListings(offset.current);
       if (data && data.jdList.length > 0) {
-        dispatch(setListings(listings.concat(data.jdList)));
-        page.current++;
+        const uniqueListings = data.jdList.filter(newJob => !listings.some(existingJob => existingJob.jdUid === newJob.jdUid));
+        dispatch(setListings(listings.concat(uniqueListings)));
+        offset.current += 9; //offset is changed here on scroll to fetch new data;
       } else {
         setHasMore(false);
       }
@@ -36,7 +38,7 @@ const JobList = () => {
     if (!isLoading && hasMore) {
       const bottom = Math.ceil(window.innerHeight + document.documentElement.scrollTop) === document.documentElement.offsetHeight;
       if (bottom) {
-        fetchData();
+        fetchData(); //calling service on scroll
       }
     }
   };
@@ -49,9 +51,10 @@ const JobList = () => {
   }, [isLoading, hasMore]);
 
   useEffect(() => {
-    fetchData();
+    fetchData(); // calling service
   }, []);
 
+  /* Filtering data on user's filters */
   const filteredListings = listings.filter(job => {
     if (filters.role && job.jobRole !== filters.role) return false;
     if (filters.employees && job.location !== filters.employees) return false;
@@ -61,24 +64,23 @@ const JobList = () => {
     if (filters.search && !job.companyName.toLowerCase().includes(filters.search.toLowerCase())) return false;
     return true;
   });
-  
 
   return (
     <div>
-    <div className="container">
-      <Filters />
-      {filteredListings.length > 0 ? (
-        <div className="row" style={{ marginTop: '30px' }}>
-          {filteredListings.map(job => (
-            <JobCard key={job.jdUid} job={job} />
-          ))}
-          {isLoading && <Loader />}
-        </div>
-      ) : (
-        <div className="no-results-message">No jobs found matching your criteria.</div>
-      )}
+      <div className="container">
+        <Filters />
+        {filteredListings.length > 0 ? (
+          <div className="row" style={{ marginTop: '30px' }}>
+            {filteredListings.map(job => (
+              <JobCard key={job.jdUid} job={job} />
+            ))}
+            {isLoading && <Loader />}
+          </div>
+        ) : (
+          <div className="no-results-message">No jobs found matching your criteria.</div>
+        )}
+      </div>
     </div>
-  </div>
   );
 };
 

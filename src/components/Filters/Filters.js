@@ -20,49 +20,56 @@ const Filters = () => {
 
   return (
     <div className='filters'>
-      <select className="search-field" name="role" value={filters.role} onChange={handleFilterChange}>
-        <option value="">Select Role</option>
-        {roleOptions.map(option => (
-          <option key={option} value={option}>{option}</option>
-        ))}
-      </select>
-
-      <select className="search-field" name="employees" value={filters.employees} onChange={handleFilterChange}>
-        <option value="">Select Number of Employees</option>
-        {employeesOptions.map(option => (
-          <option key={option} value={option}>{option}</option>
-        ))}
-      </select>
-
-      <select className="search-field" name="experience" value={filters.experience} onChange={handleFilterChange}>
-        <option value="">Select Experience</option>
-        {experienceOptions.map(option => (
-          <option key={option} value={option}>{option}</option>
-        ))}
-      </select>
-
-      <select className="search-field" name="remote" value={filters.remote} onChange={handleFilterChange}>
-        <option value="">Select Remote Option</option>
-        {remoteOptions.map(option => (
-          <option key={option} value={option}>{option}</option>
-        ))}
-      </select>
-
-      <select className="search-field" name="minBasePay" value={filters.minBasePay} onChange={handleFilterChange}>
-        <option value="">Select Minimum Base Pay</option>
-        {minBasePayOptions.map(option => (
-          <option key={option} value={option}>{option}</option>
-        ))}
-      </select>
-
-      <input
-        type="text"
-        className="search-field"
-        name="search"
-        value={filters.search}
-        onChange={handleFilterChange}
-        placeholder="Search by company name"
-      />
+        <div className='col'>
+          <select className="search-field" name="role" value={filters.role} onChange={handleFilterChange}>
+            <option value="">Select Role</option>
+            {roleOptions.map(option => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        </div>
+        <div className='col'>
+          <select className="search-field" name="employees" value={filters.employees} onChange={handleFilterChange}>
+            <option value="">Select Number of Employees</option>
+            {employeesOptions.map(option => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        </div>
+        <div className='col'>
+          <select className="search-field" name="experience" value={filters.experience} onChange={handleFilterChange}>
+            <option value="">Select Experience</option>
+            {experienceOptions.map(option => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        </div>
+        <div className='col'>
+          <select className="search-field" name="remote" value={filters.remote} onChange={handleFilterChange}>
+            <option value="">Select Remote Option</option>
+            {remoteOptions.map(option => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        </div>
+        <div className='col'>
+          <select className="search-field" name="minBasePay" value={filters.minBasePay} onChange={handleFilterChange}>
+            <option value="">Select Minimum Base Pay</option>
+            {minBasePayOptions.map(option => (
+              <option key={option} value={option}>{option}</option>
+              ))}
+          </select>
+        </div>
+        <div className='col'>
+              <input
+                type="text"
+                className="search-field"
+                name="search"
+                value={filters.search}
+                onChange={handleFilterChange}
+                placeholder="Search by company name"
+              />
+        </div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const JobCard = ({ job }) => {
   };
 
   return (
-    <div className="col-md-4 mb-3">
+    <div className="col-md-4 col-xs-12 col-sm-12 col-lg-4 mb-3">
       <div className="job-card">
         <div>
           <div className="company-info">
@@ -33,12 +33,12 @@ const JobCard = ({ job }) => {
           </div>
           {job.minJdSalary && job.maxJdSalary && (
             <p variant="body2" className="job-estimated-salary">
-              Estimated Salary: {job.salaryCurrencyCode} {job.minJdSalary} - {job.maxJdSalary} LPA
+              Estimated Salary: {job.salaryCurrencyCode} {job.minJdSalary} - {job.maxJdSalary} LPA  ✅
             </p>
           )}
           {!job.minJdSalary && job.maxJdSalary && (
             <p variant="body2" className="job-estimated-salary">
-              Estimated Salary: {job.salaryCurrencyCode} {job.maxJdSalary} LPA
+              Estimated Salary: {job.salaryCurrencyCode} {job.maxJdSalary} LPA  ✅
             </p>
           )}
           <p variant="body2" className="job-details-header">
@@ -73,9 +73,9 @@ const JobCard = ({ job }) => {
             <p className='job-salary-text'>&nbsp;</p>
             </div>
           )}
-          <Button variant="contained" href={job.jdLink} className="apply-button">
-            Easy Apply
-          </Button>
+          <button variant="contained" href={job.jdLink} className="apply-button">
+          ⚡ Easy Apply
+          </button>
         </div>
       </div>
     </div>

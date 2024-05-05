@@ -3,6 +3,9 @@
     gap: 8px;
     align-items: center;
   }
+  .col{
+    width:100% !important;
+  }
   .search-field{
     -webkit-box-align: center;
       align-items: center;
@@ -20,6 +23,13 @@
       border-style: solid;
       border-width: 1px;
       box-sizing: border-box;
-      min-width: 150px;
+      width:100%;
       outline: 0px !important;
+  }
+
+  /*For mobile screens*/
+  @media only screen and (max-width: 600px) {
+    .filters{
+      flex-direction: column;
+    }
   }
