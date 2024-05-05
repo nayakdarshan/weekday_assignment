@@ -1,79 +1,54 @@
-# Getting Started with Job Listing App
+# Job Listing App 📝🔍
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Job Listing App! This project helps you browse through job listings with ease.
 
-Clone this repo and run  
+## Installation 💻
 
-### `npm i `
+To get started, clone this repository and install the necessary dependencies by running the following commands:
 
-to install the necessary dependencies for running the app,
-incase if you are facing issues regarding installing dependecies, run:
+### `npm i`
 
-### `npm i -force`
+If you encounter any issues while installing dependencies, try running:
 
-## Available Scripts
+### `npm i --force`
 
-In the project directory, you can run:
+## Live Preview 🌐
 
-### `npm start`
+You can see the live preview of this project at [https://www.darshannayak.in/assignment](https://www.darshannayak.in/assignment).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview ℹ️
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project utilizes React and Node.js to create a dynamic web application for browsing job listings. It provides a user-friendly interface for exploring available job opportunities.
 
-### `npm test`
+## Key Features 🔑
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Browse through job listings with ease
+- Filter job listings based on various criteria
+- Infinite scrolling for seamless browsing experience
+- Responsive design for optimal viewing on all devices
 
-### `npm run build`
+## Development Environment 🛠️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was built in a Linux environment using React and Node.js 20.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Available Scripts 📜
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In the project directory, you can run the following scripts:
 
-### `npm run eject`
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner in interactive watch mode.
+- `npm run build`: Builds the app for production.
+- `npm run eject`: Allows customization of build tools and configurations.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Learn More 📚
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can learn more about React in the [React documentation](https://reactjs.org/docs/getting-started).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment 🚀
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For deployment instructions, please refer to the [deployment documentation](https://facebook.github.io/create-react-app/docs/deployment).
 
-## Learn More
+## Troubleshooting ⚠️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you encounter any issues, please refer to the [troubleshooting guide](https://facebook.github.io/create-react-app/docs/troubleshooting).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
