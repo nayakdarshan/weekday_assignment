@@ -51,14 +51,16 @@ const JobCard = ({ job }) => {
             >
               {job.jobDetailsFromCompany}
             </p>
-          <Dialog open={open} onClose={handleCloseDialog}>
-            <DialogTitle>{job.companyName}</DialogTitle>
-            <DialogContent>{job.jobDetailsFromCompany}</DialogContent>
-          </Dialog>
-          {!expanded && (
-            <a variant="text" className="show-more-btn" onClick={handleOpenDialog}>
-              Show full details
-            </a>
+            <Dialog open={open} onClose={handleCloseDialog}>
+              <DialogTitle>{job.companyName}</DialogTitle>
+              <DialogContent>{job.jobDetailsFromCompany}</DialogContent>
+            </Dialog>
+            {!expanded && (
+            <div className='show-more-container'>
+              <a variant="text" className="show-more-btn" onClick={handleOpenDialog}>
+                Show full details
+              </a>
+            </div>
           )}
           </div>
           {job.minExp && (
